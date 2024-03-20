@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import React from 'react';
 
-import {CustomButton, ListingSection} from '../components';
+import {ApplicationSection, CustomButton, ListingSection} from '../components';
 import {userDetails} from '../src/constants';
 
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
@@ -52,8 +52,11 @@ export default function Home({navigation}: HomeProps) {
       </View>
       {/* Header Ends */}
 
-      <ScrollView style={styles.homeContainer} horizontal>
-        <ListingSection></ListingSection>
+      <ScrollView style={styles.homeContainer}>
+        <View style={{gap: 10, flexDirection: 'column'}}>
+          <ListingSection />
+          <ApplicationSection />
+        </View>
       </ScrollView>
     </View>
   );
@@ -68,16 +71,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: '#397af8',
+    backgroundColor: '#000000',
     // width: '100%',
     height: 70,
 
     paddingHorizontal: 10,
     // paddingVertical: 10,
-  },
-  homeContainer: {
-    flex: 1,
-    flexDirection: 'column',
+    marginBottom: 24,
+    marginTop: 12,
   },
   profileImage: {
     borderRadius: 50,
@@ -91,5 +92,10 @@ const styles = StyleSheet.create({
   logo: {
     width: 90,
     height: 40,
+  },
+  homeContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    marginTop: 4,
   },
 });

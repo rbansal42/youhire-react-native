@@ -28,7 +28,7 @@ export default function App() {
     // 	<Profile />
     //   </SafeAreaView>
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen
           name="Login"
           component={Login}

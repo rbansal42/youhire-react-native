@@ -16,6 +16,7 @@ import ExperienceSection from './profile/ExperienceSection';
 
 // Home
 import ListingSection from './home/ListingSection';
+import ApplicationSection from './home/ApplicationSection';
 
 export {
   CustomButton,
@@ -28,4 +29,5 @@ export {
   InternshipSection,
   ExperienceSection,
   ListingSection,
+  ApplicationSection,
 };
