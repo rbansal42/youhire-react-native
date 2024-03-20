@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'black',
+    paddingHorizontal: 12,
   },
   sectionsContainer: {
     marginTop: 8,
