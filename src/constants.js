@@ -321,4 +321,11 @@ const companiesAppliedTo = [
   },
 ];
 
+const loginCredentials = [
+  {
+    username: 'student',
+    password: 'student',
+  },
+];
+
 export {userDetails, listings, companiesAppliedTo};

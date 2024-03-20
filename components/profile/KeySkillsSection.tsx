@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 24,
     borderRadius: 18,
-    backgroundColor: '#222222',
+    backgroundColor: '#111111',
   },
 
   sectionHeader: {fontSize: 21, fontWeight: 'bold'},

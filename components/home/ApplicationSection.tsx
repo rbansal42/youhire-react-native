@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 18,
     borderRadius: 12,
-    backgroundColor: '#222222',
+    backgroundColor: '#111111',
   },
 
   sectionHeader: {fontSize: 21, fontWeight: 'bold'},
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     gap: 6,
     padding: 24,
 
-    backgroundColor: '#111111',
+    backgroundColor: '#22222250',
 
     // borderWidth: 2,
     borderRadius: 22,

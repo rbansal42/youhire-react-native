@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import React from 'react';
 
-import {ApplicationSection, CustomButton, ListingSection} from '../components';
+import {ApplicationSection, ListingSection} from '../components';
 import {userDetails} from '../src/constants';
 
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
@@ -36,7 +36,7 @@ export default function Home({navigation}: HomeProps) {
               resizeMethod="resize"
               resizeMode="contain"
             />
-            <Text style={styles.username}>{userDetails.firstName}</Text>
+            <Text style={styles.username}>{`${userDetails.firstName}`}</Text>
           </View>
         </TouchableOpacity>
         {/* User Overview Ends*/}

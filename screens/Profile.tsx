@@ -14,7 +14,7 @@ export default function Profile() {
     <ScrollView style={styles.container}>
       <ProfileHeader />
       <ScrollView style={styles.sectionsContainer}>
-        <View style={{gap: 4}}>
+        <View style={{gap: 8}}>
           <EducationSection />
           <KeySkillsSection />
           <InternshipSection />
