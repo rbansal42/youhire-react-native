@@ -1,11 +1,26 @@
-import {Image, Linking, StyleSheet, Text, View} from 'react-native';
+import {
+  Image,
+  Linking,
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 
 // Component imports
-import {CustomButton, Input} from '../components';
-import {Link} from '@react-navigation/native';
+import {Input} from '../components';
 
-export default function Login() {
+// Navigation
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../App';
+import {Button} from '@rneui/themed';
+
+type LoginProps = NativeStackScreenProps<RootStackParamList, 'Login'>;
+
+const Login = ({navigation}: LoginProps) => {
+  const [isLoading, setIsLoading] = React.useState(false);
+
   return (
     <View style={styles.container}>
       <Image
@@ -20,18 +35,36 @@ export default function Login() {
       <View>
         <Input key="username" inputLabel="Username"></Input>
         <Input key="password" inputLabel="Password"></Input>
-        <CustomButton buttonLabel="Login"></CustomButton>
-        <Link to="/SignUp" style={{textDecorationLine: 'underline'}}>
+
+        <Button
+          title={'Login'}
+          size="lg"
+          radius={'sm'}
+          loading={isLoading}
+          onPress={() => {
+            setIsLoading(true);
+            setTimeout(() => {
+              setIsLoading(false);
+              navigation.replace('Home');
+            }, 700);
+          }}
+        />
+        <Text
+          style={{textDecorationLine: 'underline'}}
+          onPress={() => navigation.navigate('SignUp')}>
           Don't have an account? Sign up
-        </Link>
+        </Text>
       </View>
     </View>
   );
-}
+};
+
+export default Login;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'black',
   },
   headingText: {
     fontSize: 40,
